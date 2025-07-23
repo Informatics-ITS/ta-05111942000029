@@ -264,11 +264,15 @@ from deap import base, creator, tools, algorithms
 import warnings
 warnings.filterwarnings('ignore')
 
-# Define the fitness function for neuroevolution
+# Define the fitness function for neuroevolution, also added safety measure so it doesn't go into the negatives and break
 def evaluate_nn(individual):
-    # Extract hyperparameters from the individual (chromosome)
-    n_hidden = int(individual[0])  # Number of hidden units
-    alpha = individual[1]  # Regularization term (alpha)
+    n_hidden = int(individual[0])
+    alpha_value = max(0.0001, individual[1])  # prevent alpha from becoming zero or negative
+    model = MLPClassifier(hidden_layer_sizes=(n_hidden,), alpha=alpha_value, max_iter=500, random_state=42)
+    model.fit(X_train, y_train)
+    y_pred = model.predict(X_test)
+    accuracy = accuracy_score(y_test, y_pred)
+    return accuracy,
 
 def NeuroevolutionModel(X_train, y_train, X_test):
     from deap import base, creator, tools, algorithms
@@ -298,19 +302,45 @@ toolbox.register("mate", tools.cxBlend, alpha=0.5)
 toolbox.register("mutate", tools.mutGaussian, mu=0, sigma=0.1, indpb=0.2)
 toolbox.register("select", tools.selTournament, tournsize=3)
 
+# Repair individuals to ensure valid parameter ranges
+def repair_individual(individual):
+    individual[0] = max(1, int(individual[0]))               # hidden_layer_sizes must be > 0
+    individual[1] = max(0.0001, float(individual[1]))        # alpha must be >= 0
+    return individual
+
 population = toolbox.population(n=10)
 n_gen = 10
 for gen in range(n_gen):
-  offspring = algorithms.varAnd(population, toolbox, cxpb=0.5, mutpb=0.2)
+    offspring = algorithms.varAnd(population, toolbox, cxpb=0.5, mutpb=0.2)
 
-fits = map(toolbox.evaluate, offspring)
-for fit, ind in zip(fits, offspring):
-  ind.fitness.values = fit
-population = toolbox.select(offspring, k=len(population))
+# Sanitize each offspring to prevent invalid values
+    offspring = [repair_individual(ind) for ind in offspring]
 
+
+    fits = map(toolbox.evaluate, offspring)
+    for fit, ind in zip(fits, offspring):
+        ind.fitness.values = fit
+
+    population = toolbox.select(offspring, k=len(population))
+
+# Select the best individual from the final population
 best_individual = tools.selBest(population, k=1)[0]
-final_model = MLPClassifier(hidden_layer_sizes=(int(best_individual[0]),), alpha=best_individual[1], max_iter=500, random_state=42)
+print(f"\nBest Individual: {best_individual}")
+
+# Use the best individual to train final model
+# Ensure final values are safe
+n_hidden = max(1, int(best_individual[0]))
+alpha_value = max(0.0001, float(best_individual[1]))
+final_model = MLPClassifier(hidden_layer_sizes=(n_hidden,), alpha=alpha_value, max_iter=500, random_state=42)
 final_model.fit(X_train, y_train)
+
+# Predict using the final model
+y_pred_neuro = final_model.predict(X_test)
+
+# Evaluate
+from sklearn.metrics import classification_report, confusion_matrix
+print("\nClassification Report for Neuroevolution MLP:")
+print(classification_report(y_test, y_pred_neuro))
 
 # Add neuroevolution model to list of models
 def GetBasedModel():
@@ -408,9 +438,45 @@ for model_name, predictions in data.items():
                            columns=['Model', 'Accuracy', 'Precision', 'Sensitivity', 'Specificity', 'F1 Score', 'ROC', 'Log_Loss', 'matthews_corrcoef'])
 
     # Concatenate the current results with the model_results DataFrame
+# Evaluate and compare all models
+from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, f1_score, recall_score, confusion_matrix, log_loss, matthews_corrcoef
+import pandas as pd
+
+# Predictions from each model
+data = {
+    'Random Forest': y_pred_rfe,
+    'Gradient Boosting': y_pred_gb,
+    'Neuroevolution': y_pred_neuro
+}
+
+# Initialize an empty DataFrame to store the results
+model_results = pd.DataFrame(columns=['Model', 'Accuracy', 'Precision', 'Sensitivity', 'Specificity', 'F1 Score', 'ROC', 'Log_Loss', 'matthews_corrcoef'])
+
+# Calculate performance metrics for each model
+for model_name, predictions in data.items():
+    CM = confusion_matrix(y_test, predictions)
+
+    TN = CM[0][0]
+    FN = CM[1][0]
+    TP = CM[1][1]
+    FP = CM[0][1]
+
+    specificity = TN / (TN + FP)
+    loss_log = log_loss(y_test, predictions)
+    acc = accuracy_score(y_test, predictions)
+    roc = roc_auc_score(y_test, predictions)
+    prec = precision_score(y_test, predictions)
+    rec = recall_score(y_test, predictions)
+    f1 = f1_score(y_test, predictions)
+    mathew = matthews_corrcoef(y_test, predictions)
+
+    # Append results to the model_results DataFrame
+    results = pd.DataFrame([[model_name, acc, prec, rec, specificity, f1, roc, loss_log, mathew]],
+                           columns=model_results.columns)
     model_results = pd.concat([model_results, results], ignore_index=True)
 
-model_results
+# Display the comparison table
+print(model_results)
 
 
 
