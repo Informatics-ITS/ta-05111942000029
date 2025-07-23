@@ -11,9 +11,8 @@ Learning Neuroevolution Model]
 ## 📺 Demo Aplikasi  
 Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
 
-[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)]([https://youtu.be/nHRmQFsV8iQ 05111942000029-Nadhif-Bhagawanta-Hadiprayitno-VideoTA])  
+[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)](https://youtu.be/nHRmQFsV8iQ)
 *Klik gambar di atas untuk menonton demo*
-
 ---
 
 *Konten selanjutnya hanya merupakan contoh awalan yang baik. Anda dapat berimprovisasi bila diperlukan.*
