@@ -5,14 +5,13 @@
 **Judul TA**: [Forecasting Modelling for Early Detection of Heart Diseases Utilizing The Machine 
 Learning Neuroevolution Model]  
 **Dosen Pembimbing**: [Ts Nazleeni Samiha Binti Haron]  
-**Dosen Ko-pembimbing**: [Nama Dosen]
 
 ---
 
 ## 📺 Demo Aplikasi  
 Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
 
-[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)]([https://www.youtube.com/watch?v=VIDEO_ID](https://youtu.be/nHRmQFsV8iQ 05111942000029-Nadhif-Bhagawanta-Hadiprayitno-VideoTA))  
+[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)]([https://youtu.be/nHRmQFsV8iQ 05111942000029-Nadhif-Bhagawanta-Hadiprayitno-VideoTA](https://youtu.be/nHRmQFsV8iQ 05111942000029-Nadhif-Bhagawanta-Hadiprayitno-VideoTA))  
 *Klik gambar di atas untuk menonton demo*
 
 ---
