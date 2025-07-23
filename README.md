@@ -11,7 +11,7 @@ Learning Neuroevolution Model]
 ## 📺 Demo Aplikasi  
 Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
 
-[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)]([https://youtu.be/nHRmQFsV8iQ 05111942000029-Nadhif-Bhagawanta-Hadiprayitno-VideoTA](https://youtu.be/nHRmQFsV8iQ 05111942000029-Nadhif-Bhagawanta-Hadiprayitno-VideoTA))  
+[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)]([https://youtu.be/nHRmQFsV8iQ 05111942000029-Nadhif-Bhagawanta-Hadiprayitno-VideoTA])  
 *Klik gambar di atas untuk menonton demo*
 
 ---
@@ -30,7 +30,7 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
 ### Langkah-langkah  
 1. **Clone Repository**  
    ```bash
-   git clone https://github.com/Informatics-ITS/TA.git
+   git clone https://github.com/Informatics-ITS/ta-05111942000029
    ```
 2. **Instalasi Dependensi**
    ```bash
