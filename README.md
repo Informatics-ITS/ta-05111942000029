@@ -20,11 +20,16 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
 ## 🛠 Panduan Instalasi & Menjalankan Software  
 
 ### Prasyarat  
-- Daftar dependensi (contoh):
-  - Python 3.10+
-  - Node.js v18+
-  - MySQL 8.0
-  - [Lainnya...]
+-Python 3.10+
+-Google Colab / Jupyter Notebook (optional)
+-Koneksi internet aktif (optional)
+Paket Python:
+-pandas
+-numpy
+-matplotlib
+-seaborn
+-scikit-learn
+-deap
 
 ### Langkah-langkah  
 1. **Clone Repository**  
@@ -33,13 +38,11 @@ Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):
    ```
 2. **Instalasi Dependensi**
    ```bash
-   cd [folder-proyek]
-   pip install -r requirements.txt  # Contoh untuk Python
-   npm install  # Contoh untuk Node.js
+  cd ta-05111942000029
+  pip install -r requirements.txt
    ```
-3. **Konfigurasi**
-- Salin/rename file .env.example menjadi .env
-- Isi variabel lingkungan sesuai kebutuhan (database, API key, dll.)
+3. **Jalankan Aplikasi**
+  python main.py  # Contoh untuk Python
 4. **Jalankan Aplikasi**
    ```bash
    python main.py  # Contoh untuk Python
