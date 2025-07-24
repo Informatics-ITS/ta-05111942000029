@@ -38,8 +38,8 @@ Paket Python:
    ```
 2. **Instalasi Dependensi**
    ```bash
-  cd ta-05111942000029
-  pip install -r requirements.txt
+cd ta-05111942000029
+pip install -r requirements.txt
    ```
 3. **Jalankan Aplikasi**
   python main.py  # Contoh untuk Python
