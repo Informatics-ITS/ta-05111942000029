@@ -43,11 +43,13 @@ Jalankan perintah berikut saat menggunakan Git Bash
    cd ta-05111942000029
    pip install -r requirements.txt
    ```
-3. **Jalankan Aplikasi**
-  python main.py  # Contoh untuk Python
-4. **Jalankan Aplikasi**
+3. **Jalankan Aplikasi di VSS atau Terminal**
    ```bash
    python main.py  # Contoh untuk Python
+   ```
+4. **Buka Browser dan kunjungi:**
+   ```bash
+   [Final Project V1](https://colab.research.google.com/drive/1s52GwK7zvLlUNvoFBl_W4ELWdSuvIHr6?usp=sharing)  # Contoh untuk Python
    npm start      # Contoh untuk Node.js
    ```
 5. Buka browser dan kunjungi: `http://localhost:3000` (sesuaikan dengan port proyek Anda)
