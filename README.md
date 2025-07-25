@@ -49,7 +49,7 @@ Jalankan perintah berikut saat menggunakan Git Bash
    ```
 4. **Buka Browser dan kunjungi:**
    ```bash
-   [![Final Project V1](https://colab.research.google.com/drive/1s52GwK7zvLlUNvoFBl_W4ELWdSuvIHr6?usp=sharing)] # Contoh untuk Python
+   [Final Project V1](https://colab.research.google.com/drive/1s52GwK7zvLlUNvoFBl_W4ELWdSuvIHr6?usp=sharing) # Contoh untuk Python
    npm start      # Contoh untuk Node.js
    ```
 5. Buka browser dan kunjungi: `http://localhost:3000` (sesuaikan dengan port proyek Anda)
