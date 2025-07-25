@@ -49,10 +49,11 @@ Jalankan perintah berikut saat menggunakan Git Bash
    ```
 4. **Buka Browser dan kunjungi Google Colab:**
    
-   [Final Project V1](https://colab.research.google.com/drive/1s52GwK7zvLlUNvoFBl_W4ELWdSuvIHr6?usp=sharing) # Untuk V1 
+   [Final Project V1](https://colab.research.google.com/drive/1s52GwK7zvLlUNvoFBl_W4ELWdSuvIHr6?usp=sharing) # Untuk V1
+   
    [Final Project V2](https://colab.research.google.com/drive/1qnhKvbJbTqbPPOsPJ1NvXg2VuL5Yf5Us?usp=sharing) # Untuk V2 setelah perbaikan
    
-5. **Jalankan kode secara bertahap (per blok) di notebook**, jangan sekaligus seluruhnya. Pastikan setiap blok berhasil sebelum lanjut ke blok berikutnya.
+6. **Jalankan kode secara bertahap (per blok) di notebook**, jangan sekaligus seluruhnya. Pastikan setiap blok berhasil sebelum lanjut ke blok berikutnya.
 
 
 ## 📚 Dokumentasi Tambahan
