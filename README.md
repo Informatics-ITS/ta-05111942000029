@@ -11,7 +11,8 @@ Learning Neuroevolution Model]
 ## 📺 Demo Aplikasi  
 Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
 
-[![Demo Aplikasi](https://i.ytimg.com/vi/zIfRMTxRaIs/maxresdefault.jpg)](https://youtu.be/nHRmQFsV8iQ)
+[![Demo Aplikasi](<img width="1308" height="736" alt="image" src="https://github.com/user-attachments/assets/9f866fc9-81c9-43d2-be87-4f2c6c438861" />
+)](https://youtu.be/nHRmQFsV8iQ)
 *Klik gambar di atas untuk menonton demo*
 ---
 
@@ -47,14 +48,13 @@ Jalankan perintah berikut saat menggunakan Git Bash
    ```bash
    python main.py  # Contoh untuk Python
    ```
-4. **Buka Browser dan kunjungi:**
-   ```bash
-   [Final Project V1](https://colab.research.google.com/drive/1s52GwK7zvLlUNvoFBl_W4ELWdSuvIHr6?usp=sharing) # Contoh untuk Python
-   npm start      # Contoh untuk Node.js
-   ```
-5. Buka browser dan kunjungi: `http://localhost:3000` (sesuaikan dengan port proyek Anda)
+4. **Buka Browser dan kunjungi Google Colab:**
+   
+   [Final Project V1](https://colab.research.google.com/drive/1s52GwK7zvLlUNvoFBl_W4ELWdSuvIHr6?usp=sharing) # Untuk V1 
+   [Final Project V2](https://colab.research.google.com/drive/1qnhKvbJbTqbPPOsPJ1NvXg2VuL5Yf5Us?usp=sharing) # Untuk V2 setelah perbaikan
+   
+5. **Jalankan kode secara bertahap (per blok) di notebook**, jangan sekaligus seluruhnya. Pastikan setiap blok berhasil sebelum lanjut ke blok berikutnya.
 
----
 
 ## 📚 Dokumentasi Tambahan
 
@@ -77,5 +77,5 @@ Pastikan proyek memenuhi kriteria berikut sebelum submit:
 ## ⁉️ Pertanyaan?
 
 Hubungi:
-- Penulis: [email@mahasiswa]
-- Pembimbing Utama: [email@pembimbing]
+- Penulis: [05111942000029@student.its.ac.id]
+- Pembimbing Utama: [nazleeni@utp.edu.my]
