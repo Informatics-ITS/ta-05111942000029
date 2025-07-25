@@ -11,7 +11,7 @@ Learning Neuroevolution Model]
 ## 📺 Demo Aplikasi  
 Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
 
-[![Demo Aplikasi](https://imgur.com/a/3M6fCGC)](https://youtu.be/nHRmQFsV8iQ)
+[![Demo Aplikasi](https://i.imgur.com/VeJmQUi.png)](https://youtu.be/nHRmQFsV8iQ)
 *Klik gambar di atas untuk menonton demo*
 ---
 
